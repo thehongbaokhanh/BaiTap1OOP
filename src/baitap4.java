@@ -1,12 +1,23 @@
 import java.util.Scanner;
 
-public class baitap4test {
+public class baitap4 {
     public static void main(String[] args) {
         Scanner infor = new Scanner(System.in);
         System.out.println("Hãy nhập số mà bạn muốn đọc thành chữ vào đây: ");
         int number = infor.nextInt();
-        if (number <= 20 && number >= 0 ){
-            switch (number){
+        while (number > 1000 || number < 0 ){
+            System.out.println("Ứng dụng chỉ có thể nhập được số có nguyên dương có 3 chữ số; bạn hãy nhập lại số mà bạn muốn chuyển đổi xuống đây:");
+            number = new Scanner(System.in).nextInt();
+        }
+        int hundred = number / 100;
+        int ten = (number % 100) / 10;
+        int one = number % 10;
+        String[] hundredarray ={"","one hundred","two hundred","three hundred","four hundred","five hundred","six hundred","seven hundred","eight hundred","nine hundred"};
+        String[] tenarray ={"","","twenty","thirty","forty","fifty","sixty","seventy","eighty","ninety"};
+        String[] onearray ={"","one","two","three","four","five","six","seven","eight","nine"};
+
+        if (number >= 0 && number < 20 ) {
+            switch (number) {
                 case 0:
                     System.out.println("zero");
                     break;
@@ -67,11 +78,42 @@ public class baitap4test {
                 case 19:
                     System.out.println("nineteen");
                     break;
-                case 20:
-                    System.out.println("twenty");
-                    break;
-
             }
+        }else if (number > 100 && ten == 0) {
+            System.out.println(hundredarray[hundred] + " and " +  onearray[one]);
+        } else if (number > 100 && ten == 1) {
+            switch (one){
+                case 1:
+                    System.out.println(hundredarray[hundred] + " and eleven");
+                    break;
+                case 2:
+                    System.out.println(hundredarray[hundred] + " and twelve");
+                    break;
+                case 3:
+                    System.out.println(hundredarray[hundred] + " and thirteen");
+                    break;
+                case 4:
+                    System.out.println(hundredarray[hundred] + " and fourteen");
+                    break;
+                case 5:
+                    System.out.println(hundredarray[hundred] + " and fifteen");
+                    break;
+                case 6:
+                    System.out.println(hundredarray[hundred] + " and sixteen");
+                    break;
+                case 7:
+                    System.out.println(hundredarray[hundred] + " and seventeen");
+                    break;
+                case 8:
+                    System.out.println(hundredarray[hundred] + " and eighteen");
+                    break;
+                case 9:
+                    System.out.println(hundredarray[hundred] + " and nineteen");
+                    break;
+            }
+        }
+        else {
+            System.out.println(hundredarray[hundred] + " " + tenarray[ten] + " " + onearray[one]);
         }
     }
 }
