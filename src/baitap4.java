@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class baitap4 {
+public class baitap4test {
     public static void main(String[] args) {
         Scanner infor = new Scanner(System.in);
         System.out.println("Hãy nhập số mà bạn muốn đọc thành chữ vào đây: ");
