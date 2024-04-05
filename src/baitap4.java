@@ -5,7 +5,7 @@ public class baitap4 {
         Scanner infor = new Scanner(System.in);
         System.out.println("Hãy nhập số mà bạn muốn đọc thành chữ vào đây: ");
         int number = infor.nextInt();
-        while (number > 1000 || number < 0 ){
+        while (number >= 1000 || number < 0 ){
             System.out.println("Ứng dụng chỉ có thể nhập được số có nguyên dương có 3 chữ số; bạn hãy nhập lại số mà bạn muốn chuyển đổi xuống đây:");
             number = new Scanner(System.in).nextInt();
         }
@@ -80,35 +80,38 @@ public class baitap4 {
                     break;
             }
         }else if (number > 100 && ten == 0) {
-            System.out.println(hundredarray[hundred] + " and " +  onearray[one]);
+            System.out.println(hundredarray[hundred] + " " +  onearray[one]);
         } else if (number > 100 && ten == 1) {
             switch (one){
+                case 0:
+                    System.out.println(hundredarray[hundred] + " ten");
+                    break;
                 case 1:
-                    System.out.println(hundredarray[hundred] + " and eleven");
+                    System.out.println(hundredarray[hundred] + " eleven");
                     break;
                 case 2:
-                    System.out.println(hundredarray[hundred] + " and twelve");
+                    System.out.println(hundredarray[hundred] + " twelve");
                     break;
                 case 3:
-                    System.out.println(hundredarray[hundred] + " and thirteen");
+                    System.out.println(hundredarray[hundred] + " thirteen");
                     break;
                 case 4:
-                    System.out.println(hundredarray[hundred] + " and fourteen");
+                    System.out.println(hundredarray[hundred] + " fourteen");
                     break;
                 case 5:
-                    System.out.println(hundredarray[hundred] + " and fifteen");
+                    System.out.println(hundredarray[hundred] + " fifteen");
                     break;
                 case 6:
-                    System.out.println(hundredarray[hundred] + " and sixteen");
+                    System.out.println(hundredarray[hundred] + " sixteen");
                     break;
                 case 7:
-                    System.out.println(hundredarray[hundred] + " and seventeen");
+                    System.out.println(hundredarray[hundred] + " seventeen");
                     break;
                 case 8:
-                    System.out.println(hundredarray[hundred] + " and eighteen");
+                    System.out.println(hundredarray[hundred] + " eighteen");
                     break;
                 case 9:
-                    System.out.println(hundredarray[hundred] + " and nineteen");
+                    System.out.println(hundredarray[hundred] + " nineteen");
                     break;
             }
         }
